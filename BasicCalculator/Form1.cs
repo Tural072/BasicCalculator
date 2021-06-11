@@ -52,7 +52,7 @@ namespace BasicCalculator
             {
                 if (resultValue != 0)
                 {
-                    resultBtn.PerformClick();
+                    //resultBtn.PerformClick();      Problem var.helli?
                     text = button.Text;
                     resultTxt.Text += text;
                     labelOperation.Text = resultValue + " " + text;
@@ -119,6 +119,19 @@ namespace BasicCalculator
                 }
                 resultValue = double.Parse(resultTxt.Text);
                 labelOperation.Text = "";
+        }
+
+        private void plusMinusBtn_Click(object sender, EventArgs e)
+        {
+
+            if ((double.Parse(resultTxt.Text)) >= 0)
+            {
+                resultTxt.Text = (System.Math.Abs(double.Parse(resultTxt.Text)) * (-1)).ToString();
+            }
+            else
+            {
+                resultTxt.Text = (System.Math.Abs(double.Parse(resultTxt.Text)) * (1)).ToString();
+            }
         }
     }
 }

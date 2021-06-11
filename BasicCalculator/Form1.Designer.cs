@@ -208,7 +208,7 @@ namespace BasicCalculator
             this.plusMinusBtn.TabIndex = 11;
             this.plusMinusBtn.Text = "+/-";
             this.plusMinusBtn.UseVisualStyleBackColor = false;
-            this.plusMinusBtn.Click += new System.EventHandler(this.numbersClick);
+            this.plusMinusBtn.Click += new System.EventHandler(this.plusMinusBtn_Click);
             // 
             // farctionBtn
             // 
@@ -373,7 +373,7 @@ namespace BasicCalculator
             this.MinimumSize = new System.Drawing.Size(332, 535);
             this.Name = "basicCalculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
